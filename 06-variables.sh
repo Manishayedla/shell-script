@@ -8,5 +8,5 @@ MEDICINE=("DOLO" "CITROGEN" "AZIN")
 # list always starts with 0.
 
 echo "First Medicine is: ${MEDICINE[0]}"
-echo "First Medicine is: ${MEDICINE[1]}"
-echo "First Medicine is: ${MEDICINE[@]}"
+echo "Second Medicine is: ${MEDICINE[1]}"
+echo "Third Medicine is: ${MEDICINE[@]}"
