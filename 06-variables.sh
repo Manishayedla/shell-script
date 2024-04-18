@@ -9,4 +9,4 @@ MEDICINE=("DOLO" "CITROGEN" "AZIN")
 
 echo "First Medicine is: ${MEDICINE[0]}"
 echo "Second Medicine is: ${MEDICINE[1]}"
-echo "Third Medicine is: ${MEDICINE[@]}"
+echo "Third Medicine is: ${MEDICINE[3]}"
