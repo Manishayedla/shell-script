@@ -10,3 +10,5 @@ MEDICINE=("DOLO" "CITROGEN" "AZIN") #who can add the whole list here within doub
 echo "First Medicine is: ${MEDICINE[0]}"
 echo "Second Medicine is: ${MEDICINE[1]}"
 echo "Third Medicine is: ${MEDICINE[2]}"
+
+echo "All the Medicine that you need today are: ${MEDICINE[@,]}" #@ means gives the list of all the given values
