@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #@: is usually used to print everything right. In the same way:
+#: is used for numbers
 
 echo "All variables: $@"
 echo "Number of variables passed: $#"
