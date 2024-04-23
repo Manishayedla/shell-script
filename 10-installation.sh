@@ -20,9 +20,9 @@ then
     echo "Installation of mysql is.. FAILURE"
      exit 1 #manually exit if error comes.
 else
-    echo ""Installation of mysql is.. SUCESS"
+    echo "Installation of mysql is.. SUCESS"
 fi
 
-dnf install mysql -y
+dnf install git -y
 
 echo "Is script proceeding??"
