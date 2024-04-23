@@ -24,5 +24,13 @@ else
 fi
 
 dnf install git -y
+if [ $USERID -ne 0 ]
+then 
+    echo "Installation of git is.. FAILURE"
+     exit 1 #manually exit if error comes.
+else
+    echo "Installation of git is.. SUCESS"
+fi
+
 
 echo "Is script proceeding??"
