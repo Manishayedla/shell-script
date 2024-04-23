@@ -7,7 +7,8 @@ USERID=$(id -u) #how do you run a command inside shellscript and take the output
 #VALIDATE IS A FUNC NAME
 #DECLARATION OF FUNC SYNTAX
 VALIDATE() { 
-if[ $1 -ne 0 ]
+
+if [ $1 -ne 0 ] 
 then 
 echo "$2.. FAILURE"
 exit 1
