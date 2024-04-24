@@ -2,6 +2,9 @@
 
 
 USERID=$(id -u) #how do you run a command inside shellscript and take the output
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$($0 | cut -d "." -f1)
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 
 #VALIDATE IS A FUNC NAME
@@ -26,10 +29,10 @@ else
     echo "You are super user."
 fi
 
-dnf install mysql -y &>>$LOGFILE
+dnf install mysql -y 
 VALIDATE $? "Installing mysql"
 
-dnf install git -y &>>$LOGFILE
+dnf install git -y
 VALIDATE $? "Installing GIT"
 
 
