@@ -4,7 +4,9 @@
 USERID=$(id -u) #how do you run a command inside shellscript and take the output
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(basename $0 | cut -d "." -f1)
-LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
+LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log  
+#temp directory lo scriptname - what time is has been executed 
+#creates a log file #where to send it? then we use redirections
 
 
 #VALIDATE IS A FUNC NAME
@@ -29,10 +31,10 @@ else
     echo "You are super user."
 fi
 
-dnf install mysql -y 
+dnf install mysql -y  &>>$LOGFILE
 VALIDATE $? "Installing mysql"
 
-dnf install git -y
+dnf install git -y &>>$LOGFILE
 VALIDATE $? "Installing GIT"
 
 
