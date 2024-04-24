@@ -3,7 +3,7 @@
 
 USERID=$(id -u) #how do you run a command inside shellscript and take the output
 TIMESTAMP=$(date +%F-%H-%M-%S)
-SCRIPT_NAME=$(basename $0 | cut -d "." -f1)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log  
 #temp directory lo scriptname - what time is has been executed 
 #creates a log file #where to send it? then we use redirections
