@@ -3,7 +3,7 @@
 
 USERID=$(id -u) #how do you run a command inside shellscript and take the output
 TIMESTAMP=$(date +%F-%H-%M-%S)
-SCRIPT_NAME=$($0 | cut -d "." -f1)
+SCRIPT_NAME=$(basename $0 | cut -d "." -f1)
 LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 
