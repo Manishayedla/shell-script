@@ -35,7 +35,7 @@ do
 echo "package to install: $i"
 dnf list installed $i &>>$LOGFILE
 
-if [ $? -eq 0]  #if exit status is equal to zero then print already installed...skipping
+if [ $? -eq 0 ]  #if exit status is equal to zero then print already installed...skipping
 then
 echo "$i already installed.. SKIPPING" 
 else
