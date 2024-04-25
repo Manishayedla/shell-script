@@ -9,7 +9,9 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 #creates a log file #where to send it? then we use redirections
 
 R="\e[31m"
-R="\e[32m"
+G="\e[32m"
+N="\e[0m"
+
 
 echo "Script started executing at: $TIMESTAMP"
 
@@ -19,10 +21,10 @@ VALIDATE() {
 
 if [ $1 -ne 0 ] 
 then 
-echo "$2.. FAILURE"
+echo -e "$2...$R FAILURE $N"
 exit 1
 else
-echo "$2.. SUCCESS"
+echo -e "$2..$G SUCCESS $N"
 fi
 }
 
