@@ -8,6 +8,10 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 #temp directory lo scriptname - what time is has been executed 
 #creates a log file #where to send it? then we use redirections
 
+R="\e[31m"
+R="\e[32m"
+
+echo "Script started executing at: $TIMESTAMP"
 
 #VALIDATE IS A FUNC NAME
 #DECLARATION OF FUNC SYNTAX
@@ -22,7 +26,9 @@ echo "$2.. SUCCESS"
 fi
 }
 
-if [ $USERID -ne 0 ]
+
+#validating user
+if [ $USERID -ne 0 ] 
 then 
 
 echo "Please run this script with root access."
