@@ -45,6 +45,7 @@ if [ $? -eq 0 ]  #if exit status is equal to zero then print already installed..
 then
 echo -e "$i already installed.. $Y SKIPPING $N" 
 else
-echo -e "$i not installed.. $R need to install $N"
+dnf install $i -y &>>$LOGFILE
+VALIDATE $? “Installing of $i” 
 fi
 done
