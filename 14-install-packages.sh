@@ -18,10 +18,10 @@ VALIDATE() {
 
 if [ $1 -ne 0 ] 
 then 
-echo "$2.. FAILURE"
+echo -e "$2.. $R FAILURE $N"
 exit 1
 else
-echo "$2.. SUCCESS"
+echo -e "$2.. $G SUCCESS $N"
 fi
 }
 
@@ -43,8 +43,8 @@ dnf list installed $i &>>$LOGFILE
 
 if [ $? -eq 0 ]  #if exit status is equal to zero then print already installed...skipping
 then
-echo -e "$i already installed.. $R SKIPPING $N" 
+echo -e "$i already installed.. $Y SKIPPING $N" 
 else
-echo -e "$i not installed.. $Y need to install $N"
+echo -e "$i not installed.. $R need to install $N"
 fi
 done
