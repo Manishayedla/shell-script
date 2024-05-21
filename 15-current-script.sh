@@ -10,7 +10,7 @@ echo "Process ID of current shell script: $$"
 
 #after calling other script we are calling again.
 
-echo "DevOps calling other script, coursee: $COURSE"
+echo "DevOps calling other script, course: $COURSE"
 
 
 
