@@ -10,7 +10,7 @@ echo "Process ID of current shell script: $$"
 
 #after calling other script we are calling again.
 
-echo "After calling other script, course: $COURSE"
+echo "After calling other scriptt, course: $COURSE"
 
 
 
