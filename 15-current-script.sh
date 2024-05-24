@@ -4,7 +4,7 @@ COURSE="DevOps from Current Script"
 
 
 echo "DevOps calling other script, course: $COURSE"
-echo "Process ID of current shell script: $$"
+echo "Process ID of current shell scriptt: $$"
 
 source ./16-other-script.sh
 
