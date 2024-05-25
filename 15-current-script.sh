@@ -10,7 +10,7 @@ source ./16-other-script.sh
 
 #after calling other script we are calling again.
 
-echo "After calling other scriptt, course: $COURSE"
+echo "Afterr calling other scriptt, course: $COURSE"
 
 
 
