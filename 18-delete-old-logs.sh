@@ -20,11 +20,11 @@ fi
 
 FILES=$(find $SOURCE_DIRECTORY -name "*.log" -mtime +14) #USED TO FIND THE OUT THE FILES OLDER THAN 14DAYS.
 
-while IFS= read -r line
+while IFS= read line
 do
 
-      echo "Deleting file: $line"
-      rm -rf $line
+      echo "Deleting file: $line" 
+      rm -rf $line 
 done <<< $FILES
 
 
