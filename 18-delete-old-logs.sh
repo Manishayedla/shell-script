@@ -12,7 +12,7 @@ N="\e[0m"
 #when working with directories and folders you to need to check if it exists or not in the first place.
 if [ -d $SOURCE_DIRECTORY ]
 then 
-echo "$G Source directory exists $N"
+echo " Source directory exists "
 else
 echo "$R Please make sure $SOURCE_DIRECTORY exists $N"
 exit 1
