@@ -14,13 +14,13 @@ do
     #condition
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
-    MESSAGE+="$FOLDER is more than $DISK_THRESHOLD, Current usage: $USAGE"
+    MESSAGE+="$FOLDER is more than $DISK_THRESHOLD, Current usage: $USAGE /n"
     fi
        
 
 done <<< $DISK_USAGE
 
-echo "Message: $MESSAGE"
+echo -e "Message: $MESSAGE"
 
 #first the basic command "df -hT | grep xfs" we are putting it in a variable called disk_usage and the lines that variable prints. 
 #the printed lines we are trading each line one by one 
@@ -42,4 +42,6 @@ echo "Message: $MESSAGE"
 
 #creating message variable on the top. in place of echo printing we are adding variable message line 17
 #and out of the loop echo "" line 23
+
+#Message: / is more than 6, Current usage: 32/var is more than 6, Current usage: 17/var/log is more than 6, Current usage: 6/boot is more than 6, Current usage: 53
 
