@@ -22,7 +22,7 @@ done <<< $DISK_USAGE
 
 echo -e "Message: $MESSAGE" #-e for special characters
 
-echo "MESSAGE" | mail -s "Disk Usage Alert" yedlamanishareddy24@gmail.com 
+echo "$MESSAGE" | mail -s "Disk Usage Alert" yedlamanishareddy24@gmail.com 
 #echo "body" | mail -s "subject" to-add
 
 #first the basic command "df -hT | grep xfs" we are putting it in a variable called disk_usage and the lines that variable prints. 
