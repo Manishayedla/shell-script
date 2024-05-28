@@ -14,13 +14,16 @@ do
     #condition
     if [ $USAGE -ge $DISK_THRESHOLD ]
     then
-    MESSAGE+="$FOLDER is more than $DISK_THRESHOLD, Current usage: $USAGE \n"
+    MESSAGE+="$FOLDER is more than $DISK_THRESHOLD, Current usage: $USAGE \n" #\n for adding new line
     fi
        
 
 done <<< $DISK_USAGE
 
-echo -e "Message: $MESSAGE"
+echo -e "Message: $MESSAGE" #-e for special characters
+
+echo "MESSSAGE" | mail -s "Disk Usage Alert" yedlamanishareddy24@gmail.com 
+#echo "body" | mail -s "subject" to-add
 
 #first the basic command "df -hT | grep xfs" we are putting it in a variable called disk_usage and the lines that variable prints. 
 #the printed lines we are trading each line one by one 
