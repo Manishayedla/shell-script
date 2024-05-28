@@ -20,7 +20,7 @@ do
 
 done <<< $DISK_USAGE
 
-echo "Message: $Message"
+echo "Message: $MESSAGE"
 
 #first the basic command "df -hT | grep xfs" we are putting it in a variable called disk_usage and the lines that variable prints. 
 #the printed lines we are trading each line one by one 
