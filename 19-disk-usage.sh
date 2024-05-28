@@ -22,7 +22,7 @@ done <<< $DISK_USAGE
 
 echo -e "Message: $MESSAGE" #-e for special characters
 
-echo "MESSSAGE" | mail -s "Disk Usage Alert" yedlamanishareddy24@gmail.com 
+echo "MESSAGE" | mail -s "Disk Usage Alert" yedlamanishareddy24@gmail.com 
 #echo "body" | mail -s "subject" to-add
 
 #first the basic command "df -hT | grep xfs" we are putting it in a variable called disk_usage and the lines that variable prints. 
@@ -48,3 +48,4 @@ echo "MESSSAGE" | mail -s "Disk Usage Alert" yedlamanishareddy24@gmail.com
 
 #Message: / is more than 6, Current usage: 32/var is more than 6, Current usage: 17/var/log is more than 6, Current usage: 6/boot is more than 6, Current usage: 53
 
+#after adding email we will run on centos server.
