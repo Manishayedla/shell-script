@@ -5,7 +5,7 @@ DISK_THRESHOLD=6 #means when the disk space reaches 75% it gives you alerts.
 
 while IFS= read -r line #TO READ EVERYLINE
 do
-    USAGE=$(echo $line | | awk -F " " '{print $6F}' | cut -d "%" -f1) #from diskusage here $line is printing the first line of it.
+    USAGE=$(echo $line | awk -F " " '{print $6F}' | cut -d "%" -f1) #from diskusage here $line is printing the first line of it.
     FOLDER=$(echo $line | awk -F " " '{print $NF}')
 
     #condition
